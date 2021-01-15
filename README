@@ -1,0 +1,79 @@
+shimmy10
+204693352
+Shimon Balsam
+
+ilay
+204622336
+Ilay Bregman
+
+We discussed the exercise with: Rubber Duck.
+
+=============================
+= README for ex9: ship.py , asteroid.py , torpedo.py , asteroids_main.py
+=============================
+
+===========================
+=  Description: =
+
+4 programs used in order to play a game of Asteroids:
+
+The first, ship.py, creates from scratch a class used for a space ship, including
+all of it's possible needs and capabilities, such as moving, accelerating,
+life count, etc.
+
+The second, asteroid.py, creates a class used for asteroids including all of it's
+possible needs and capabilities, such as moving and all of the results of
+encountering other objects.
+
+The third, torpedo.py, creates a class used for torpedos, including all of it's
+possible need and capabilities, such as being shot, moving, etc.
+
+The fourth, asteroids_main.py while calling upon all the previous programs,
+builds a new space ship, new asteroids (which the user can choose the amount of
+asteroids he would like to face, using the sys.argv in the 'main'), and new
+torpedos (based on the user's interactive pressing of the 'space bar'
+throughout the game).
+Furthermore, the program includes a 'main', which starts the game, accordingly.
+The game will end and close once the player destroys all the asteroids, or
+if the player's space ship is hit 3 times by the asteroids. The player also has
+the choice to quit the game at any given moment.
+
+====================================================
+
+==================================================
+= Special Comments =
+
+1. Tuples: Over all, we chose to stay as far away as possible from using tuples
+within our code.
+this was due to the fact that it is exhausting, disorderly and confusing to
+always access the specific item needed within the tuple, using correct indexes.
+Generally (besides minor local usages) the only exception to our anti-tuple rule
+was the board_size, which we felt made sense only when left as a whole.
+This might sound contradicting to the (x,y) positions and speed of each object,
+which in the mathematical world is excepted as a tuple and yet we broke out of
+said tuple,but that was because of the mass of data needed for each part of x
+and y, creating a mess, as written above.
+
+2. Privacy: We chose to keep all of the objects within the classes we built as
+private to each class. Any change to an object was only capable of happening
+within the class. So in order for the code to work, in each class for each
+object, we created "get" and "set" functions, as needed.
+We chose to work in this form due to the fact that in ex8, we were taught that
+when different programs are created by different programmers, yet used
+interchangeably between them, each programmer should have no need to know how
+his fellow programmer's program works. Nor should he be able to access and
+change anything within said program, which is not defined as changeable from
+outside, by its rightful programmer.
+
+3. Long game_loop function: As you will notice, our game_loop function is quite
+long. We considered using different 'helpful functions' in order to shorten it,
+but except for 2 specific 'helpful functions' we decided to leave majority of
+the code within the same function. We decided to do so because, to the naked
+eye, it helps to understand the game flow in a more simple fashion, rather then
+constantly scrolling up and down in order to understand what each step would
+do.
+The exceptions we made were only in order to reduce repetition within the
+function.
+
+========================================================================
+
